@@ -38,15 +38,4 @@ class ToDo
     end
     res
   end
-
-#  def self.arr_map(arr_hashs)
-#  	res_hashs = []
-#		arr_hashs.each do |el|
-#			todo = ToDo.new(el['title'])
-#			todo.id = el['id']
-#			res_hashs << todo
-#		end
-#		res_hashs
-#  end
-
 end
