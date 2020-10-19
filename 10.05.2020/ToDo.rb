@@ -38,4 +38,13 @@ class ToDo
     end
     res
   end
+  
+  def self.mapping (data, conn)
+    res = []
+    data.each do |elem|
+      todo = ToDo.new(elem, conn)
+      res << todo
+    end
+    res
+  end
 end
