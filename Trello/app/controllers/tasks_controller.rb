@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   # GET /tasks
   def index
-    @tasks = Task.all
+    @tasks = Task.actual
   end
 
   # GET /tasks/1
@@ -13,20 +13,23 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    @list = List.find(params[:list_id])
     @task = Task.new
   end
 
   # GET /tasks/1/edit
   def edit
+    @list = List.find(params[:list_id])
     @task = Task.find(params["id"])
   end
 
   # POST /tasks
   def create
-    @task = Task.new(task_params)
+    @list = List.find(params[:list_id])
+    @task = Task.new(task_params.merge(list_id: params[:list_id]))
 
     if @task.save
-      redirect_to @task, notice: 'Task was successfully created.'
+      redirect_to list_task_path(params['list_id'], @task), notice: 'Task was successfully created.'
     else
       render :new
     end
@@ -34,8 +37,10 @@ class TasksController < ApplicationController
 
   # PATCH/PUT /tasks/1
   def update
+    @list = List.find(params[:list_id])
+
       if @task.update(task_params)
-        redirect_to @task, notice: 'Task was successfully updated.'
+        redirect_to list_task_path(params['list_id'], @task), notice: 'Task was successfully updated.'
       else
         render :edit
       end
@@ -44,7 +49,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   def destroy
     @task.destroy
-    redirect_to tasks_url, notice: 'Task was successfully destroyed.'
+    redirect_to list_path(params[:list_id]), notice: 'Task was successfully destroyed.'
   end
 
   private

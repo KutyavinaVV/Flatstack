@@ -1,0 +1,10 @@
+h2
+  | Your lists
+- @lists.each do |list|
+  h3
+    = list.title
+  = link_to 'Show |', list_path(list)
+  = link_to ' Edit |', edit_list_path(list)
+  = link_to ' Destroy |' , list_path(list), method: :delete, data: { confirm: 'Are you sure?'}
+  hr
+= link_to 'New list', new_list_path

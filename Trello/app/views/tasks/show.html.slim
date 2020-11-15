@@ -1,0 +1,9 @@
+h4
+  | Task:
+p
+  = @task.title
+hr
+
+= link_to ' Edit', edit_list_task_path(params[:list_id], @task)
+= link_to ' Destroy', list_task_path(params[:list_id], @task), method: :delete, data: { confirm: 'Are you sure?'}
+= link_to ' Back', list_path(params[:list_id])

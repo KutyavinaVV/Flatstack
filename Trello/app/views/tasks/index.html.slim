@@ -1,0 +1,7 @@
+h1
+  | All tasks
+- @tasks.each do |task|
+  h3
+    = task.title
+  hr
+= link_to 'Lists', lists_path
