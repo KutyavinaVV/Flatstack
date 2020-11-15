@@ -12,10 +12,12 @@ AllCops:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
-# without freezing strings
 
 Layout/LineLength:
   Max: 120
 
 Style/Documentation:
   Enabled: false
+
+Metrics/MethodLength:
+  Max: 30
