@@ -1,0 +1,23 @@
+.body {
+  background-color: $lightbluecolor;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: $lightblue;
+
+  &__menu {
+    display: flex;
+  }
+
+  &__link{
+    padding-top: 15px;
+    margin: 0 10px;
+  }
+}
+
+.content {
+  padding: 30px 20px;
+  background-color: $lightbluecolor;
+}

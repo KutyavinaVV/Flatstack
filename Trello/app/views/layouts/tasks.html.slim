@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+      | Trello
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  body
+    header.header
+      h4
+        | Trello
+
+      nav.header__menu
+        = link_to 'Home', root_path, class: 'header__link header__link--main'
+        = link_to 'Tasks', tasks_path, class: 'header__link'
+        = link_to 'Lists', lists_path, class: 'header__link'
+
+    main.content
+      = yield
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
