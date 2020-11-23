@@ -7,9 +7,8 @@ ul.lists
     li.lists__item
       .lists__header
         = link_to list.title, list_path(list)
-      ul
-        - list.tasks.each do |task|
-          li
+      - list.tasks.each do |task|
+          div.list__item
             = task.title
       div.lists__link
         = link_to ' Edit |', edit_list_path(list), class: 'lists__edit'
