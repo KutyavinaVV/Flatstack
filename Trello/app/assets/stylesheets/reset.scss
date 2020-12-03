@@ -1,26 +1,30 @@
 body {
   background-color: $white;
-  color: #333;
-  margin: 0;
+  color: $dark-gray;
   font-family: verdana, arial, helvetica, sans-serif;
+  margin: 0;
 }
 
-body, p, ol, ul, td {
+body,
+p,
+ol,
+ul,
+d {
   font-size: 13px;
   line-height: 18px;
 }
 
 pre {
-  background-color: #eee;
-  padding: 10px;
+  background-color: $white;
   font-size: 11px;
+  padding: 10px;
 }
 
 a {
   color: $black;
   text-decoration: none;
 
-  &:hover { //псевдо класс
+  &:hover {
     color: lighten($black, 40%);
     text-decoration: underline;
   }
@@ -35,36 +39,32 @@ td {
   padding: 0 5px 7px;
 }
 
-div.field,
-div.actions {
-  margin-bottom: 10px;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
+.field-with-errors {
+  background-color: $red;
   display: table;
+  padding: 2px;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
+.error-explanation {
+  background-color: $new-white;
+  border: 2px solid $red;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  padding: 7px 7px 0;
+  width: 450px;
 }
 
-#error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
+.error-explanation.h2 {
+  background-color: $dark-red;
+  color: $white;
   font-size: 12px;
+  font-weight: bold;
   margin: -7px -7px 0;
-  background-color: #c00;
-  color: #fff;
+  padding: 5px 5px 5px 15px;
+  text-align: left;
 }
 
-#error_explanation ul li {
+.error-explanation ul,
+li {
   font-size: 12px;
   list-style: square;
 }
@@ -76,8 +76,8 @@ label {
 .notice {
   &:not(:empty) {
     background-color: $lightblue;
-    padding: 10px;
     display: inline-block;
+    padding: 10px;
     vertical-align: top;
   }
 

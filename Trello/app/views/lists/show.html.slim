@@ -11,7 +11,7 @@ ul.lists
       div.lists__link
         = link_to ' Show', list_task_path(@list, task)
         = link_to ' Edit', edit_list_task_path(@list, task)
-        = link_to ' Destroy', list_task_path(@list, task), method: :delete, data: { confirm: 'Are you sure?'}
+        = link_to ' Destroy', list_task_path(@list, task), method: :delete, data: { confirm: 'Are you sure?' }
 
 div.lists__link
   = link_to 'Edit', edit_list_path(@list)

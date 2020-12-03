@@ -1,8 +1,8 @@
 = form_with model: @list, local: true do |form|
   - if @list.errors.any?
-    #error_explanation
+    div.error-explanation
       h2
-        = pluralize(@list.errors.count, "error")
+        = pluralize(@list.errors.count, 'error')
         |  prohibited this list from being saved:
       ul
         - @list.errors.full_messages.each do |msg|

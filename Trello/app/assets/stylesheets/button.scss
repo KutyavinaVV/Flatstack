@@ -1,23 +1,23 @@
 .button {
   background-color: $lightblue;
-  display: inline-block;
-  cursor: pointer;
-  color: $white;
-  padding: 5px, 8px;
-  outline: none;
-  padding: 5px 5px;
   border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 5px;
+
 
   &:hover {
+    animation: blue-to-pink 2s ease infinite;
     background-color: $lightblue;
     color: $white;
-    animation: blue-to-pink 2s ease infinite;
   }
 
   &:active {
     position: relative;
-    top:1px;
+    top: 1px;
   }
 }
 
-@include animation-mixin(blue-to-pink, $lightblue, pink);
+@include animation-mixin(blue-to-pink, $lightblue, $pink);

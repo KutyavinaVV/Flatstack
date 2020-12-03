@@ -1,13 +1,12 @@
 @mixin animation-mixin ($name, $color1, $color2) {
   @keyframes #{$name} {
-    0% {
+
+    0%, 100% {
       background-color: $color1;
     }
+
     50% {
       background-color: $color2;
-    }
-    100% {
-      background-color: $color1
     }
   }
 }
