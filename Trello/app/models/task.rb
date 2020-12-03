@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Task < ApplicationRecord
   belongs_to :list
 
@@ -6,8 +8,8 @@ class Task < ApplicationRecord
   before_save :up
 
   private
-    def up
-      self.title = title.upcase
-    end
-    
+
+  def up
+    self.title = title.upcase
+  end
 end

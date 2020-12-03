@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
-
-  layout "tasks"
+  layout 'tasks'
 
   def index
     @lists = List.all
@@ -15,7 +14,7 @@ class ListsController < ApplicationController
   end
 
   def edit
-    @list= List.find(params[:id])
+    @list = List.find(params[:id])
   end
 
   def create
