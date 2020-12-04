@@ -7,6 +7,10 @@
   outline: none;
   padding: 5px;
 
+  .hidden {
+    display: none;
+  }
+
 
   &:hover {
     animation: blue-to-pink 2s ease infinite;

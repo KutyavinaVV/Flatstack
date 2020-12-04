@@ -1,18 +1,21 @@
-.notice = notice
-h2
-  | Your lists
+.js-lists
+  .notice = notice
+  h2
+    ' Your lists
+  span.button.js-sort-asc.hidden Order by asc
+  span.button.js-sort-desc.hidden Order by desk
 
-ul.lists
-  - @lists.each do |list|
-    li.lists__item
-      .lists__header
-        = link_to list.title, list_path(list)
-      - list.tasks.each do |task|
-          div.list__item
-            = task.title
-      div.lists__link
-        = link_to ' Edit |', edit_list_path(list), class: 'lists__edit'
-        = link_to ' Destroy ', list_path(list), method: :delete,
-                data: { confirm: 'Are you sure?' }, class: 'lists__destroy'
+  ul.lists.js-list
+    - @lists.each do |list|
+      li.lists__item.js-item data-list=list.to_json
+        .lists__header
+          = link_to list.title, list_path(list)
+        - list.tasks.each do |task|
+            div.list__item
+              = task.title
+        div.lists__link
+          = link_to ' Edit |', edit_list_path(list), class: 'lists__edit'
+          = link_to ' Destroy ', list_path(list), method: :delete,
+                  data: { confirm: 'Are you sure?' }, class: 'lists__destroy'
 
-= link_to 'New list', new_list_path, class: 'button'
+  = link_to 'New list', new_list_path, class: 'button'

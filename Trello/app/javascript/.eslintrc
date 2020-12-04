@@ -1,0 +1,19 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-undef": "off",
+    "no-new": 0,
+    "global-require": "warn",
+    "jsx-a11y/label-has-for": [ 1, {
+      "components": [ "Label" ],
+      "required": {
+          "every": [ "nesting", "id" ]
+      },
+      "allowChildren": false
+    }],
+    "max-len": 0,
+    "no-useless-escape": "off",
+    "import/no-unresolved": "off"
+  }
+}

@@ -3,6 +3,14 @@
   flex-wrap: wrap;
   padding: 0;
 
+  h2 {
+    span {
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: normal;
+    }
+  }
+
   &__item {
     background-color: $white;
     border: 1px solid $lightblue;
@@ -40,4 +48,8 @@
     text-align: center;
   }
 
+}
+
+.hidden {
+  display: none;
 }
