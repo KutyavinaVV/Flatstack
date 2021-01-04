@@ -17,5 +17,6 @@ require('@rails/activestorage').start();
 require('channels');
 
 Array.from(document.querySelectorAll('.js-lists')).forEach(($el) => {
+  console.log("hello")
   new Sorter($el);
 });

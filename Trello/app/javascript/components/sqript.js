@@ -8,7 +8,7 @@ class Sorter {
     this.sortButtonASC = this.$el.querySelector('.js-sort-asc');
     this.sortButtonDESC = this.$el.querySelector('.js-sort-desc');
     this.list = this.$el.querySelector('.js-list');
-
+    console.log("Hello");
     this.dataAttributes = Array.from(items).map(
       (item) => ({
         node: item,
