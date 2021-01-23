@@ -21,4 +21,41 @@
 .content {
   background-color: $lightbluecolor;
   padding: 30px 20px;
+  height: 600px;
+
+
+  .main_home_container {
+    float: left;
+    background-color: $lightblue;
+    padding: 20px;
+    font-size: 25px;
+    line-height: 43px;
+  }
+
+  .first {
+    float:left;
+    width: 50px;
+    height: 20px;
+    background-color: $lightblue;
+    margin: 10px;
+    animation: blue-to-pink 2s ease infinite;
+  }
+
+  .second {
+    float:right;
+    width: 50px;
+    height: 20px;
+    background-color: $lightblue;
+    margin: 10px;
+    animation: blue-to-pink 2s ease infinite;
+  }
+
+  .b {
+    font-size: 20px;
+    height: 38px;
+    text-align: center;
+    background-color: $lightblue;
+  }
 }
+
+@include animation-mixin(blue-to-pink, $lightblue, $pink);

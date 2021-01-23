@@ -8,7 +8,6 @@ class Sorter {
     this.sortButtonASC = this.$el.querySelector('.js-sort-asc');
     this.sortButtonDESC = this.$el.querySelector('.js-sort-desc');
     this.list = this.$el.querySelector('.js-list');
-    console.log("Hello");
     this.dataAttributes = Array.from(items).map(
       (item) => ({
         node: item,
@@ -38,9 +37,11 @@ class Sorter {
       this.sortButtonDESC.classList.remove('button');
       this.sortButtonASC.classList.add('button');
       this.sortButtonASC.classList.remove('hidden');
-      const sorteItemByTitleDesc = orderBy(this.dataAttributes, ['title'], ['desc']);
-      sorteItemByTitleDesc.forEach((item) => this.list.appendChild(item.node));
+      const sortItemByTitleDesc = orderBy(this.dataAttributes, ['title'], ['desc']);
+      sortItemByTitleDesc.forEach((item) => this.list.appendChild(item.node));
     }
+
+
 }
 
 export default Sorter;

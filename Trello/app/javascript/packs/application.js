@@ -9,14 +9,14 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import Sorter from '../components/sqript';
+import Sorter from '../components/script';
 
 require('@rails/ujs').start();
 require('turbolinks').start();
 require('@rails/activestorage').start();
 require('channels');
 
+
 Array.from(document.querySelectorAll('.js-lists')).forEach(($el) => {
-  console.log("hello")
   new Sorter($el);
 });
