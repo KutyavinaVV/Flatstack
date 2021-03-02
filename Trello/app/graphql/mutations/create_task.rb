@@ -7,7 +7,7 @@ module Mutations
 
 
     def resolve(title:, list_id:)
-      Task.create!([title: title, list_id: list_id])
+      Task.create!(title: title, list_id: list_id)
     end
   end
 end
